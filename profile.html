@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>Gaming Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000080; /* Navy Blue */
+    }
+
+    .profile-header {
+      background: linear-gradient(135deg, #000080, #ffffff);
+      color: #000080; /* Navy Blue */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .avatar img {
+      border-radius: 50%;
+      border: 3px solid #000080; /* Navy Blue Border */
+    }
+
+    .stats {
+      background-color: #f0f8ff; /* Alice Blue */
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+      background-color: #f8f9fa; /* Light Gray */
+      color: #000080; /* Navy Blue */
+      border: 1px solid #000080;
+    }
+
+    .form-control:focus {
+      background-color: #f8f9fa;
+      color: #000080;
+      border-color: #000080;
+      box-shadow: none;
+    }
+
+    .favorite-games img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .favorite-games .game-title {
+      margin-top: 10px;
+    }
+
+    .btn-custom {
+      background-color: #000080; /* Navy Blue */
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #5a5aff; /* Lighter Blue */
+    }
+    .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+  </style>
+</head>
+<body>
+<div class="container mt-5">
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <div class="avatar">
+      <img src="img/boy.png" alt="User Avatar" width="100" height="100">
+    </div>
+    <h1 class="mt-3" id="username">Player123</h1>
+    <p id="level">Level: 15</p>
+    <p id="rank">Rank: Silver</p>
+  </div>
+
+  <!-- User Statistics -->
+  <div class="row text-center mt-4">
+    <div class="col-md-4 stats">
+      <h5>Games Played</h5>
+      <p id="games-played">45</p>
+    </div>
+    <div class="col-md-4 stats">
+      <h5>Achievements</h5>
+      <p id="achievements">10</p>
+    </div>
+    <div class="col-md-4 stats">
+      <h5>High Score</h5>
+      <p id="high-score">120,000</p>
+    </div>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="mt-4 p-3 rounded" style="background-color: #f0f8ff;">
+    <h3>About Me</h3>
+    <p id="about-text">
+      Hey! I'm an avid gamer who loves exploring new worlds and dominating leaderboards. Let's play together!
+    </p>
+    <button class="btn btn-custom mt-2" data-bs-toggle="collapse" href="#userForm" role="button" aria-expanded="false" aria-controls="userForm">Edit Info</button>
+    <!-- Editable Form -->
+    <div class="collapse mt-3" id="userForm">
+      <form>
+        <div class="mb-3">
+          <label for="usernameInput" class="form-label">Username</label>
+          <input type="text" class="form-control" id="usernameInput" value="Player123">
+        </div>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailInput" value="player123@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="phoneInput" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phoneInput" value="123-456-7890">
+        </div>
+        <button type="button" class="btn btn-custom" onclick="saveInfo()">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Favorite Games Section -->
+  <div class="mt-4">
+    <h3>Favorite Games</h3>
+    <div class="row g-3 mt-2">
+      <!-- PUBG Card -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/pubg.webp" class="card-img-top" alt="PUBG">
+          <div class="card-body">
+            <h5 class="card-title">PUBG</h5>
+            <p class="card-text">A battle royale game where survival is the ultimate goal. Fight and be the last one standing!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Call of Duty Card -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/cod.jpg" class="card-img-top" alt="Call of Duty">
+          <div class="card-body">
+            <h5 class="card-title">Call of Duty</h5>
+            <p class="card-text">A fast-paced shooter with thrilling campaigns and competitive multiplayer modes.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Valorant Card -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/valorant.png" class="card-img-top" alt="Valorant">
+          <div class="card-body">
+            <h5 class="card-title">Valorant</h5>
+            <p class="card-text">A tactical FPS game where precision, strategy, and teamwork determine victory.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Fortnite Card -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/fortnite.jpg" class="card-img-top" alt="Fortnite">
+          <div class="card-body">
+            <h5 class="card-title">Fortnite</h5>
+            <p class="card-text">Dive into vibrant battles in this iconic game with its unique building mechanics.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Red Dead Redemption 2 Card -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/Untitled.jpg" class="card-img-top" alt="Red Dead Redemption 2">
+          <div class="card-body">
+            <h5 class="card-title">Red Dead Redemption 2</h5>
+            <p class="card-text">Explore the Wild West in this epic tale of honor, loyalty, and survival.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for Saving User Info -->
+<script>
+  function saveInfo() {
+    const username = document.getElementById("usernameInput").value;
+    const email = document.getElementById("emailInput").value;
+    const phone = document.getElementById("phoneInput").value;
+
+    // Update the displayed user information
+    document.getElementById("username").textContent = username;
+    document.getElementById("about-text").textContent = `Email: ${email}, Phone: ${phone}`;
+
+    // Optional: Alert the user (replace with a Toast or notification in production)
+    alert("User information updated successfully!");
+  }
+</script>
+</body>
+</html>

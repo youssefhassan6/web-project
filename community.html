@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="shortcut icon" href="imges/repetitive.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>community</title>
+        <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+           
+      }
+      
+      
+      .game-thumbnail {
+        width: 80%; height: 20%;align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .game-thumbnail:hover {
+            transform: scale(1.1) translateY(-10px);
+        }
+
+        .community {
+            padding: 2rem;
+            background: #f4f4f9;
+        }
+
+        .community h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .community .forum {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .community .forum-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .community .forum-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .community .forum-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+
+        .community .forum-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .community {
+            text-align: center;
+            padding: 50px 20px;
+
+        }
+        .community h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .community .posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .community .post {
+            background-color: #f1e8e8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(232, 226, 226, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .community .post:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 69, 0, 0.6);
+        }
+        .community .post h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .community .post p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .community .post .read-more {
+            color: #ff4500;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .community .post .read-more:hover {
+            color: #fff;
+        }
+    </style>
+    
+</head>
+    
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/game.png" alt="Game Store Logo" width="40" class="me-2">
+                <span>Game Store</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" 
+                    style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link rounded-5" aria-selected="false">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="community.html" class="nav-link rounded-5 active" aria-selected="true">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Contact_us.html" class="nav-link rounded-5" aria-selected="false">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="games.html" class="nav-link rounded-5" aria-selected="false">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about_us.html" class="nav-link rounded-5" aria-selected="false">About Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="login.html">Log In</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-primary" href="register.html">Sign Up</a>
+                    </li>
+                    <a href="profile.html">
+                        <img src="img/boy.png" alt="icon" width="40" height="40" style="margin-left: 10px;">
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <main>
+        <section id="home"></br>
+            <h1 style="text-align: center;">Welcome to GameStore</h1>
+            </hr>
+            <p style="text-align: center;">Your ultimate destination for all things gaming!</p>
+
+        </section>
+
+        <section id="community" class="community">
+            <h2>Community</h2>
+            <div class="forum">
+                <div class="forum-card">
+                    <h3>General Discussion</h3>
+                    <p>Join conversations about your favorite games, share tips, and connect with other gamers.</p>
+                </div>
+                <div class="forum-card">
+                    <h3>Game Strategies</h3>
+                    <p>Discuss strategies, share walkthroughs, and help others achieve success in their games.</p>
+                </div>
+                <div class="forum-card">
+                    <h3>Fan Creations</h3>
+                    <p>Show off your fan art, videos, and mods, and celebrate the creativity of the community.</p>
+                </div>
+                <div class="forum-card">
+                    <h3>Support & Feedback</h3>
+                    <p>Get help with issues, suggest new features, or give feedback about the platform.</p>
+                </div>
+            </div>
+            
+        </section>
+        <section id="community" class="community">
+            <h3>Read More</h3>
+            <div class="posts">
+                <div class="post">
+                    <h4>Latest Game Tips</h4>
+                    <p>Discover the top strategies to master your favorite games!</p>
+                    <a href="community/tips" class="read-more">Read More</a>
+                </div>
+                <div class="post">
+                    <h4>Community Highlights</h4>
+                    <p>Check out what our amazing members have been up to!</p>
+                    <a href="community/highlights" class="read-more">Read More</a>
+                </div>
+                <div class="post">
+                    <h4>Upcoming Events</h4>
+                    <p>Stay updated on the latest gaming events and tournaments.</p>
+                    <a href="community/events" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+       <!-- Footer -->
+       <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+          <p>&copy; 2024 TaskManager. All rights reserved.</p>
+        </div>
+      </footer>  
+</body>
+</html>
