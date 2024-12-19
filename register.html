@@ -5,57 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="shortcut icon" href="game.png" type="x-icon">
-    <title>Register</title>
+    <link rel="shortcut icon" href="img/game.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Sign Up</title>
     <style>
-    body{
-            background-image: url('COD2.avif');
+        body {
+            background-image: url('img/COD2.avif');
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            height: 560px;
+            margin: 0;
         }
         .signup-container {
-            background-color: ;
             background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 15px;
             width: 100%;
             max-width: 400px;
-            margin-right: 450px;
-            color: ;
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .social-icons a {
+            color: #000;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #0056b3;
         }
     </style>
 </head>
 <body>
-<div class="signup-container">
-    <h3 class="text-center mb-4"> <b>Register Now<b></h3>
-    <form>
-        <div class="mb-3">
-            <label for="fullName" class="form-label"></label>
-            <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="signup-container">
+            <h3 class="text-center mb-4"><b>Sign Up</b></h3>
+            <form>
+                <!-- Full Name Field -->
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="fullName" placeholder="Full Name" required
+                        aria-label="Full Name"
+                        oninput="this.setCustomValidity(''); if (this.value === '') { this.setCustomValidity('Please enter your full name'); }">
+                </div>
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required
+                        aria-label="Email"
+                        oninput="this.setCustomValidity(''); if (this.value === '') { this.setCustomValidity('Please enter your email'); }">
+                </div>
+                <!-- Password Field -->
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required
+                        aria-label="Password"
+                        oninput="this.setCustomValidity(''); if (this.value === '') { this.setCustomValidity('Please enter your password'); } else if (this.value.length < 8) { this.setCustomValidity('Password must be at least 8 characters long'); }">
+                </div>
+                <!-- Confirm Password Field -->
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required
+                        aria-label="Confirm Password"
+                        oninput="this.setCustomValidity(''); if (this.value === '') { this.setCustomValidity('Please confirm your password'); } else if (this.value !== document.getElementById('password').value) { this.setCustomValidity('Passwords do not match'); } else { this.setCustomValidity(''); }">
+                </div>
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                </div>
+            </form>
+            <!-- Login and Social Links -->
+            <p class="text-center mt-3">
+                <b>Already have an account?</b> <a href="login.html">Login</a>
+            </p>
+            <div class="social-icons text-center mt-3">
+                <a href="https://facebook.com" class="me-2"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" class="me-2"><i class="bi bi-twitter"></i></a>
+                <a href="https://youtube.com"><i class="bi bi-youtube"></i></a>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label"></label>
-            <input type="email" class="form-control" id="email" placeholder="Email" required>
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label"></label>
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
-        </div>
-        <div class="mb-3">
-            <label for="confirmPassword" class="form-label"></label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your Password" required>
-        </div>
-        <button type="submit" class="btn btn-primary w-100"><b>Register<b></button>
-    </form>
-    <div class="text-center mt-3">
-        <p> <b>Already have an account? <a href="login.html">Log In</a></p>
     </div>
-</div>
-</script>
 </body>
 </html>
